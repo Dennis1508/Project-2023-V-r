@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
-    <link rel href="../Dictionary.mjs">
+    <title>ManUnitedPlug</title>
+  
 </head>
 <body>
-<button id ="btnLanguageNO" type ="button">Norsk</button>
-<button id ="btnLanguageEN" type ="button">English</button>
+
+<h1>ManUnitedPlug</h1>
+<div id = "container"></div>
+<input type ="text" id = "myInp" placeholder="Søk Spiller">
+<button id = "myBtn">Search</button>
+
 
 
 
 <script>
 
-let button1 = document.getElementById("btnLanguageNO");
-let button2 = document.getElementById("btnLanguageEN");
+let container = document.getElementById("container");
+let btn = document.getElementById("myBtn");
+let myInp = document.getElementById("myInp");
+let url = "https://www.manutd.com/";
+let admin = document.getElementById("admin");
 
 
 
-button1.addEventListener('onclick', function(evt){
+loadData();
 
-});
 
-button2.addEventListener("onclick", function(evt){
 
-});
 
 
 </script>
+
 
 
 
