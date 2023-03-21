@@ -1,89 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ManUnitedStand</title>
-  
+
 </head>
+
 <body>
 
-<h1>ManUnitedStand</h1>
-<div id = "container"></div>
-<input type ="text" id = "myInp" placeholder="Søk etter Spiller">
-<button id = "myBtn">Search</button>
-<img src = "/img/ManchesterUnited.jpg" alt="ManchesterUnited">
+    <h1>ManUnitedStand</h1>
+    <div id="container"></div>
+    <input type="text" id="myInp" placeholder="Søk etter Spiller">
+    <button id="myBtn">Search</button>
+    <img src="/img/ManchesterUnited.jpg" alt="ManchesterUnited">
 
 
 
 
 
-<script>
+    <script>
 
-let container = document.getElementById("container");
-let btn = document.getElementById("myBtn");
-let myInp = document.getElementById("myInp");
-let url = "https://www.manutd.com/";
-let admin = document.getElementById("admin");
-
-
-
-loadData();
-
-let response = await fetch(url);
-let data = await respone.json();
+        let container = document.getElementById("container");
+        let btn = document.getElementById("myBtn");
+        let myInp = document.getElementById("myInp");
+        let url = "https://www.manutd.com/";
+        let admin = document.getElementById("admin");
 
 
 
+        loadData();
+
+        let response = await fetch(url);
+        let data = await respone.json();
 
 
-btn.addEventListener("click", function(evt){
-
-});
 
 
-</script>
 
-<style>
-     *{
-        margin: 1;
-        font-family: Garamond, serif;
-        font-weight: 400;
+        btn.addEventListener("click", function (evt) {
+
+        });
+
+
+    </script>
+
+    <style>
+        * {
+            margin: 1;
+            font-family: Garamond, serif;
+            font-weight: 400;
         }
 
-    
-    h1{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        color: rgb(255, 255, 255);
-        font-style:italic;
-       
-        
-    }
-    button{
-        color: black;
-        border-radius: 5px;
-        border-style: double;
-        border-color: #2e5745;
-    
-    }
-    body{
-        background-color:#c70101;
-    }
-    img {
-        float: right;
-        margin-right: 20px;
-        margin-top: -20px;
-    }
-    img:hover{
-        cursor: pointer;
-    }
-</style>
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            font-style: italic;
+
+
+        }
+
+        button {
+            color: black;
+            border-radius: 5px;
+            border-style: double;
+            border-color: #2e5745;
+
+        }
+
+        body {
+            background-color: #c70101;
+        }
+
+        img {
+            float: right;
+            margin-right: 20px;
+            margin-top: -20px;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
 
 
 
-<script type ="module" src="Dictionary.mjs" ></script>
-    
+    <script type="module" src="Dictionary.mjs"></script>
+    <script type="module" src = "index.mjs"></script>
+
 </body>
+
 </html>
