@@ -27,8 +27,19 @@
     <img src=".." alt="hmmmmm" data-language-key="noe" />
 
 
-    <script>
+    <script type="module">
+        import {translate, setLang} from "./tools.mjs"
         
+        const imagesToTranslate = document.querySelectorAll("img[data-language-key], [alt]");
+        translate(imagesToTranslate, "alt");
+
+        const textElementsToTranslate = document.querySelectorAll("[data-language-key]:not([alt])");
+        translate(textElementsToTranslate, "innerHTML");
+
+        document.getElementById("language").onselectionchange = (evt) => {
+            setLang(evt.target.value);
+        }
+
     </script>
 
 
