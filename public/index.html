@@ -10,83 +10,29 @@
 </head>
 
 <body>
+    <select name ="language" id ="language">
+        <option value ="no">Norsk</option>
+        <option value ="en">Engelsk</option>
 
-    <h1>ManUnitedStand</h1>
-    <div id="container"></div>
-    <input type="text" id="myInp" placeholder="Søk etter Spiller">
-    <button id="myBtn">Search</button>
-    <img src="/img/ManchesterUnited.jpg" alt="ManchesterUnited">
+    </select>
+    
+    <div data-language-key = "Welcome">
+        placeholder text
+    </div>
 
+    <div data-language-key = "noe">
+        placeholder text
+    </div>
 
-
+    <img src=".." alt="hmmmmm" data-language-key="noe" />
 
 
     <script>
-
-        let container = document.getElementById("container");
-        let btn = document.getElementById("myBtn");
-        let myInp = document.getElementById("myInp");
-        let url = "https://www.manutd.com/";
-        let admin = document.getElementById("admin");
-
-
-
-        loadData();
-
-        let response = await fetch(url);
-        let data = await respone.json();
-
-
-
-
-
-        btn.addEventListener("click", function (evt) {
-
-        });
-
-
+        
     </script>
 
-    <style>
-        * {
-            margin: 1;
-            font-family: Garamond, serif;
-            font-weight: 400;
-        }
 
-
-        h1 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 40px;
-            color: rgb(255, 255, 255);
-            font-style: italic;
-
-
-        }
-
-        button {
-            color: black;
-            border-radius: 5px;
-            border-style: double;
-            border-color: #2e5745;
-
-        }
-
-        body {
-            background-color: #c70101;
-        }
-
-        img {
-            float: right;
-            margin-right: 20px;
-            margin-top: -20px;
-        }
-
-        img:hover {
-            cursor: pointer;
-        }
-    </style>
-
+      
 
 
     <script type="module" src="Dictionary.mjs"></script>
