@@ -10,52 +10,46 @@
 </head>
 
 <body>
-    <select name ="language" id ="language">
-        <option value ="no">Norsk</option>
-        <option value ="en">Engelsk</option>
-
-    </select>
-    
-    <div data-language-key = "Welcome">
-        
+    <div class ="container">
+        <div class ="login-left">
+            <div class ="login-header">
+                <h1>Welcome to our Application</h1>
+                <p>Please loging to the user platform</p>
+            </div>
+            <form class ="login-form"></form>
+            <div class =" login-form-content">
+                <label for ="email">Enter Email</label>
+                <input type = "text" id ="email">
+            </div>
+            <div class ="form-item">
+                <label for ="password">Enter password</label>
+                <input type ="password" id ="password">
+            </div>
+            <div class ="form-item">
+                <div class ="checkbox">
+                    <input type = "checkbox" id ="rememberMeCheckbox">
+                    <label for ="rememberMeCheckbox" id ="checkboxLabel"></label>
+                </div>
+            </div>
+            <button type = "submit">Sign In</button>
+        </div>
+        <div class ="login-form-footer">
+            <a href ="#">
+                <img width="30" src="">
+            </a>
+        </div>
     </div>
 
-    <div data-language-key = "noe">
-        placeholder text
-    </div>
 
 
+    <Script>
 
+    </Script>
 
-    <script type="module">
-        import {translate, setLang} from "./tools.mjs"
-        
-        const imagesToTranslate = document.querySelectorAll("img[data-language-key], [alt]");
-        translate(imagesToTranslate, "alt");
-
-        const textElementsToTranslate = document.querySelectorAll("[data-language-key]:not([alt])");
-        translate(textElementsToTranslate, "innerHTML");
-
-        document.getElementById("language").onselectionchange = (evt) => {
-            setLang(evt.target.value);
-        }
-
-    </script>
-
-    <style>
     
 
-
-
-
-
-
-
-    </style>
-
-      
-
-
+    
+    
     <script type="module" src="Dictionary.mjs"></script>
     <script type="module" src = "index.mjs"></script>
 
