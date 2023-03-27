@@ -4,9 +4,9 @@ import Dictionary from "../moduleDemo-main/test/lan/no.json"
 class Dictionary{
 
     constructor(...languages){
-        this.languagefiles = languages
+        this.languagefiles = languages;
         this.dictionary = null;
-        this.currentLanguage = null
+        this.currentLanguage = null;
     }
 
     setLanguage = async function(lang){
