@@ -10,98 +10,95 @@
 </head>
 
 <body>
-    <h1>ManchesterUnitedStand</h1>
-    <input type="text" id="myImp" placeholder="Søk Spillere">
-    <button type ="button" id ="myBtn">Search</button>
 
+    <header>
+        <h1>ManchesterUnitedStand</h1>
+        <nav class="navigation">
+
+        </nav>
+
+    </header>
+
+        <select name ="language" id ="language">
+        <option value ="no">Norsk</option>
+        <option value ="en">Engelsk</option>
+        </select>
     
 
-    <div id ="container">
+        <div data-language-key ="Welcome">
+            placeholder text
+        </div>
 
-    </div>
-
-
-    <Script>
-        let container = document.getElementById("container");
-        let myBtn = document.getElementById("myBtn");
-        let myImp = document.getElementById("myImp");
-        let url = "https://www.manutd.com/";
+        <div data-language-key="noe">
+            placeholder text
+        </div>
 
 
 
+        <script type ="module">
+            import {translate, setLang} from "./tools.mjs"
+
+            const imagesToTranslate = document.querySelectorAll("img[data-language-key], [alt]");
+            translate(imagesToTranslate, "alt");
+
+            const textElementsToTranslate = document.querySelectorAll("[data-lanuage-key]:not([alt])");
+            translate(textElementsToTranslate, "innerHTMl");
+
+            document.getElementById("language").onselectionchange = (evt) => {
+                setLang(evt.target.value);
+            }
+
+
+
+
+
+        </script>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-    </Script>
+    
 
 
 
     <style>
-
-    *{
-        margin: 1;
-        font-family: Garamond, serif;
-        font-weight: 400;
+        * {
+            margin: 1;
+            font-family: Garamond, serif;
+            font-weight: 500;
         }
 
-    
-    h1{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        font-style:italic;
+
+
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            /*font-style: italic;*/
+
+        }
+
        
-    }
 
-    h2 {
-        font-family: sans-serif;
-        font-size: 25px;
-        color: rgb(0, 0, 0);
-        border-bottom: 1px solid black;
-    }
-
-    
-    body {
-        background: #DA291C !important;
-    }
+        h2 {
+            font-family: sans-serif;
+            font-size: 25px;
+            color: rgb(0, 0, 0);
+            border-bottom: 1px solid black;
+        }
 
 
-
-
-
-
-
-
+        body {
+            background: #DA291C !important;
+        }
     </style>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script type="module" src="Dictionary.mjs"></script>
+    
     <script type="module" src="index.mjs"></script>
 
 </body>
