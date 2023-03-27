@@ -14,8 +14,7 @@
     <input type="text" id="myImp" placeholder="Søk Spillere">
     <button type ="button" id ="myBtn">Search</button>
 
-
-    <h2>Nyheter</h2>
+    
 
     <div id ="container">
 
@@ -26,6 +25,26 @@
         let container = document.getElementById("container");
         let myBtn = document.getElementById("myBtn");
         let myImp = document.getElementById("myImp");
+        let url = "https://www.manutd.com/";
+
+
+        loadData();
+
+        let response = await fetch(url);
+        let data = await response.json();
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,11 +68,19 @@
         font-size: 40px;
         font-style:italic;
        
-        
     }
 
+    h2 {
+        font-family: sans-serif;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid black;
+    }
 
-
+    
+    body {
+        background: #DA291C !important;
+    }
 
 
 
